@@ -40,7 +40,7 @@ class Structure(models.Model):
     # список товаров
     product = models.ManyToManyField(Product, verbose_name='Товары')
     # иерархия
-    hierarchy = models.IntegerField(max_length=150, choices=Hierarchy, verbose_name='Уровень звена')
+    hierarchy = models.IntegerField(max_length=150, choices=Hierarchy.choices, verbose_name='Уровень звена')
     supplier = models.ForeignKey('Structure', on_delete=models.PROTECT, **NULLABLE, verbose_name='Поставщик')
     debt = models.DecimalField(decimal_places=2, max_digits=15, **NULLABLE, verbose_name='Задолженность')
     date_of_creation = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
