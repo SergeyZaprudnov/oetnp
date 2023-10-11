@@ -23,10 +23,10 @@ In this task you are asked to develop an online platform for an electronics reta
          Retail network;
          Individual entrepreneur.
 
-     Each link in the network refers to only one equipment supplier (not necessarily the previous one in 
-     the hierarchy). It is important to note that the hierarchy level is determined not by the name of the link,
-     but by its relationship to other elements of the network, i.e. The plant is always at level 0, and if the
-     retail network relates directly to the plant, bypassing other links, its level is -1.
+     Each link in the network refers to only one equipment supplier (not necessarily the previous one 
+     in the hierarchy). It is important to note that the hierarchy level is determined not by the name 
+     of the link, but by its relationship to other elements of the network, i.e. The plant is always at level 0,
+     and if the retail network relates directly to the plant, bypassing other links, its level is -1.
 
      2. Each link in the network must have the following elements:
          - Name;
@@ -83,8 +83,8 @@ In this task you are asked to develop an online platform for an electronics reta
 
     Каждое звено сети ссылается только на одного поставщика оборудования (не обязательно предыдущего 
     по иерархии). Важно отметить, что уровень иерархии определяется не названием звена, а отношением 
-    к остальным элементам сети, т.е. завод всегда находится на 0 уровне, а если розничная сеть относится
-    напрямую к заводу, минуя остальные звенья - её уровень - 1.
+    к остальным элементам сети, т.е. завод всегда находится на 0 уровне, а если розничная сеть 
+    относится напрямую к заводу, минуя остальные звенья - её уровень - 1.
 
     2. Каждое звено сети должно обладать следующими элементами:
         - Название;
