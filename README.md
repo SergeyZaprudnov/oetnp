@@ -25,8 +25,9 @@ In this task you are asked to develop an online platform for an electronics reta
 
      Each link in the network refers to only one equipment supplier (not necessarily the previous one 
      in the hierarchy). It is important to note that the hierarchy level is determined not by the name 
-     of the link, but by its relationship to other elements of the network, i.e. The plant is always at level 0,
-     and if the retail network relates directly to the plant, bypassing other links, its level is -1.
+     of the link, but by its relationship to other elements of the network, i.e. The plant is always 
+     at level 0, and if the retail network relates directly to the plant, bypassing other links, its 
+     level is -1.
 
      2. Each link in the network must have the following elements:
          - Name;
