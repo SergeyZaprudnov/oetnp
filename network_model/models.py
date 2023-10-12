@@ -46,6 +46,7 @@ class Structure(models.Model):
     date_of_creation = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
 
     def clean(self):
+        """Функция фильтрации допустимости звена иерархии и отображения задолженности"""
         if self.supplier:
             supplier_hierarchy = Structure.objects.values('hierarchy').get(id=self.supplier_id)['hierarchy']
             if self.hierarchy - supplier_hierarchy not in [0, 1]:

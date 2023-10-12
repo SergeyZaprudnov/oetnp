@@ -14,8 +14,9 @@ from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
-
+# импорт файла env
 load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+# Внесены настройки, добавлены приложения
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,7 +54,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Добавлена настройка CORS
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -140,6 +142,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'django_media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# внесены настройки авторизации и аутентификации
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -147,9 +150,27 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
 }
-
+# настройка срока жизни токена
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'AUTH_HEADER_TYPES': ('Bearer',),
+}
+
+# настройки CORS
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+]
+CORS_ALLOW_ALL_ORIGINS = False
+
+# настройки Djoser
+DJOSER = {
+    'SERIALIZERS': {
+        'user_create': 'users.serializers.UserRegistrationSerializer'
+    },
+    'PASSWORD_RESET_CONFIRM_URL': '#/password/reset/confirm/{uid}/{token}',
+    'USERNAME_RESET_CONFIRM_URL': '#/username/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': '#/activate/{uid}/{token}',
+
+    'LOGIN_FIELD': 'email'
 }
