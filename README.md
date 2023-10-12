@@ -57,6 +57,19 @@ In this task you are asked to develop an online platform for an electronics reta
      5. Add the ability to filter objects by a specific country.
         Configure API access rights so that only active employees have access to the API.
 
+# To launch the application, follow these steps:
+    1. Clone the project from the repository
+    2. Install the dependencies of the requirements.txt file with the command: pip install -r requirements.txt
+    3. Activate the virtual environment with the command: source venv/bin/activate (if it is not activated)
+    4. Create a .env file and make settings using the .env.example file as an example (in this case, database settings)
+    5. Apply database migrations with the command: python3 manage.py migrate
+    6. Start the server (locally) with the command: python3 manage.py runserver
+
+# URLs for launching documentation:
+     - Swagger:        http://127.0.0.1:8000/api/schema/swagger-ui/
+     - Redoc:          http://127.0.0.1:8000/api/redoc/
+     - Admin pannel:   http://127.0.0.1:8000/admin/
+
 
 # - - - RU - - -
 
@@ -115,3 +128,18 @@ In this task you are asked to develop an online platform for an electronics reta
 
     5. Добавить возможность фильтрации объектов по определенной стране.
        Настроить права доступа к API так, чтобы только активные сотрудники имели доступ к API.
+
+
+# Для запуска приложения выполните следующие щаги:
+   1. Клонировать проект с репозитория
+   2. Установить зависимости файла requirements.txt командой: pip install -r requirements.txt
+   3. Активировать виртуальное окружение командой: source venv/bin/activate (усли оно не активировано)
+   4. Создать файл .env и внести настройки на примере файла .env.example ( в данном случае настройки БД)
+   5. Выполнить применение миграций БД командой: python3 manage.py migrate
+   6. Запустить сервер (локально) командой: python3 manage.py runserver
+
+
+#  URL-адреса для запуска документации:
+     - Swagger:        http://127.0.0.1:8000/api/schema/swagger-ui/
+     - Redoc:          http://127.0.0.1:8000/api/redoc/
+     - Admin pannel:   http://127.0.0.1:8000/admin/
